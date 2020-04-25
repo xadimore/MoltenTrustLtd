@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "StockDetails";
+}
+
+<h1 class="text-center mt-5 mb-3">StockDetails</h1>
+
+
+
+
+<div class="row mt-5 justify-content-center">
+    <div class="col-lg-6">
+        <div class="card text-center">
+            <div class="card-header font-weight-bold text-warning">
+                Upload Stocks Details
+            </div>
+            <div class="card-body">
+                <form method="post">
+
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+
+                    <a class="btn mt-3 btn-block" asp-action="UploadStockInfo" asp-controller="DashBoard">Upload</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+
+        $(document).ready(function () {
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).next(".custom-file-label").html(fileName);
+            });
+        });
+
+
+    </script>
+}
+

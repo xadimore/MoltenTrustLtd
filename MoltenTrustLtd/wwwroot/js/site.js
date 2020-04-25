@@ -13,47 +13,26 @@ $(document).ready(function () {
         
     });
 
-
-    
-
-
     $("#goal").on({
         "mouseover": function () {
-            this.src = "/Images/icons8-plus-50 (2).png";
+            this.src = "/Images/icons8-plus-50.png";
         },
         "mouseout": function () {
-            this.src = 'Images/icons8-plus-50.png';
+            this.src = '/Images/icons8-plus-50 (2).png'; 
         }
     });
 
     $("#goal").one("click", function () {
         $("#cont").removeClass('content');
         $("#cont").addClass('contentnew');
-        $("#goal").attr('src','Images/icons8-minus-50 (1).png');
+        this.src = '/Images/icons8-minus-50.png';
         $(this).click(function () {
             $("#cont").removeClass('contentnew');
             $("#cont").addClass('content');
         });
     });
 
-    //$("#goal").on({
-    //    "click": function () {
-    //        $("#cont").removeClass('content');
-    //        $("#cont").addClass('contentnew');
-    //        $("#goal").attr('src','Images/icons8-minus-50 (1).png');
-    //    },
-    //    //"click": function () {
-    //    //    $("#cont").removeClass('contentnew');
-    //    //    $("#cont").addClass('content');
-    //    //}
-    //});
-
-
-    //$('#cont').on('click', function () {
-    //    $("#cont").removeClass('content');
-    //    $("#cont").addClass('current1');
-    //    $("#goal").attr('src','Images/icons8-minus-50 (1).png');
-    //}),
+    
 
 });
 

@@ -1,0 +1,41 @@
+﻿@model DataLibrary.Models.MarketData
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="m-5"> Admin Dashboard</h1>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <a asp-action="MarketData" asp-controller="DashBoard" class="btn text-white">Click to Upload Market Data</a>
+        </div>
+
+        <div class="col-lg-4">
+            <a asp-action="StockDetails" asp-controller="DashBoard" class="btn text-white">Click to Upload Stock</a>
+        </div>
+        <div class="col-lg-4">
+            <a asp-action="DailyPrice" asp-controller="DashBoard" class="btn text-white">Click to Upload Daily Price List</a>
+        </div>
+    </div>
+</div>
+
+
+
+   
+
+
+
+@section Scripts{
+
+    <script>
+
+        $(document).ready(function () {
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).next(".custom-file-label").html(fileName);
+            });
+        });
+
+
+    </script>
+}
